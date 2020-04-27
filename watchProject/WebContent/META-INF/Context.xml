@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+  <Resource 
+   name="jdbc/watchDB"
+   auth="Container"
+   type="javax.sql.DataSource"
+   driverClassName="org.mariadb.jdbc.Driver"
+   url="jdbc:mariadb://203.245.28.69:3306/project_db"
+   username="root"
+   password="manager123"
+   maxActive="500"
+   maxIdle="100"  
+  />
+
+</Context>
+
+
+
