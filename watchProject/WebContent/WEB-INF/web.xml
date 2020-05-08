@@ -9,4 +9,165 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  
+  
+  
+  <!-- 메인 관리 -->
+  <servlet>
+    <servlet-name>MainFrontController</servlet-name>
+    <servlet-class>net.main.action.MainFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+     <servlet-name>MainFrontController</servlet-name>
+     <url-pattern>*.me</url-pattern>
+  </servlet-mapping>
+  <!-- 메인 관리 -->
+  
+  <!-- 고객 상품 관리 -->
+  <servlet>
+    <servlet-name>ItemsFrontController</servlet-name>
+    <servlet-class>net.items.action.ItemsFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+     <servlet-name>ItemsFrontController</servlet-name>
+     <url-pattern>*.go</url-pattern>
+  </servlet-mapping>  
+  <!-- 고객 상품 관리 -->
+  
+  <!-- 상품 리뷰 관리 -->
+  <servlet>
+    <servlet-name>ReviewFrontController</servlet-name>
+    <servlet-class>net.review.action.ReviewFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+     <servlet-name>ReviewFrontController</servlet-name>
+     <url-pattern>*.re</url-pattern>
+  </servlet-mapping>  
+  <!-- 상품 리뷰 관리 -->
+  
+  <!-- 장바구니 관리 -->
+  <servlet>
+    <servlet-name>BasketFrontController</servlet-name>
+    <servlet-class>net.basket.action.BasketFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+     <servlet-name>BasketFrontController</servlet-name>
+     <url-pattern>*.ba</url-pattern>
+  </servlet-mapping>  
+  <!-- 장바구니 관리 -->
+  
+  <!-- 주문 관리 -->
+  <servlet>
+    <servlet-name>OrderFrontController</servlet-name>
+    <servlet-class>net.order.action.OrderFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+     <servlet-name>OrderFrontController</servlet-name>
+     <url-pattern>*.or</url-pattern>
+  </servlet-mapping>  
+  <!-- 주문 관리 -->
+  
+  
+  
+  
+  
+  
+   <!-- code -->
+  <servlet>
+    <servlet-name>CodeFrontController</servlet-name>
+    <servlet-class>net.code.action.CodeFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>CodeFrontController</servlet-name>
+    <url-pattern>*.co</url-pattern>
+  </servlet-mapping>
+  
+  <!-- codedetail -->
+  <servlet>
+  	<servlet-name>CodeDetailFrontController</servlet-name>
+  	<servlet-class>net.code.detail.action.CodeDetailFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>CodeDetailFrontController</servlet-name>
+  	<url-pattern>*.cd</url-pattern>
+  </servlet-mapping>
+  
+  <!-- adminmember -->
+  <servlet>
+  	<servlet-name>AdminMemberFrontController</servlet-name>
+  	<servlet-class>net.admin.member.action.AdminMemberFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AdminMemberFrontController</servlet-name>
+	<url-pattern>*.am</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <!-- 장바구니 -->
+  <servlet>
+     <servlet-name>shoppingBasketFrontController</servlet-name>
+     <servlet-class>net.shoppingBasket.action.shoppingBasketFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+     <servlet-name>shoppingBasketFrontController</servlet-name>
+     <url-pattern>*.shopping</url-pattern>
+  </servlet-mapping>
+  <!-- 장바구니 -->
+  
+ <!--  구매하기 -->
+  <servlet>
+     <servlet-name>OrderWatchFrontController</servlet-name>
+     <servlet-class>net.orderWatch.action.OrderWatchFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+     <servlet-name>OrderWatchFrontController</servlet-name>
+     <url-pattern>*.orw</url-pattern>
+  </servlet-mapping>
+  <!-- 구매하기 -->
+  
+  
+  
+   
+  <!-- 회원관리 -->
+  <servlet>
+     <servlet-name>UserFrontController</servlet-name>
+     <servlet-class>net.user.action.UserFrontController</servlet-class>
+  </servlet> 
+  
+  <servlet-mapping>
+     <servlet-name>UserFrontController</servlet-name>
+     <url-pattern>*.com</url-pattern>
+  </servlet-mapping>  
+  <!-- 회원관리 -->
+  
+  
+  
+  
+  <!-- 사용자 상품 처리 -->
+  <servlet>
+     <servlet-name>WatchFrontController</servlet-name>
+     <servlet-class>net.watch.action.WatchFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+     <servlet-name>WatchFrontController</servlet-name>
+     <url-pattern>*.gos</url-pattern>
+  </servlet-mapping>
+ <!--  사용자 상품 처리 -->
 </web-app>
+
+ 
+  
+  
