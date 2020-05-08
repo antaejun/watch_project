@@ -15,7 +15,7 @@
 		// response.sendRedirect("./ItemsList.go");
 		// response.sendRedirect("./Main.me");
 		// response.sendRedirect("./ItemCodeDetail.go");
-		response.sendRedirect("./Main.me");
+		response.sendRedirect("./main");
 		// response.sendRedirect("./BasketList.ba");
 		
 	%>

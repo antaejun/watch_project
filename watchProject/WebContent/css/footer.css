@@ -1,0 +1,52 @@
+footer {
+    text-align: center;
+    font-size: larger;
+}
+
+footer .nav_bar {
+    border-bottom: 1px solid gray;
+}
+footer .nav_bar ul {
+    list-style-type: none;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+footer .nav_bar li {
+    float: left;
+}
+footer .nav_bar li a {
+    display: block;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: black;
+}
+footer .info {
+    position: relative;
+    
+    height: 250px;
+    max-width: 1920px;
+    margin: 20px auto;
+}
+footer .info > .left {
+    float: left;
+    height: 100%;
+    width: 20%;
+}
+footer .info > .right {
+    float: left;
+    height: 100%;
+    width: 80%;
+    text-align: left;
+}
+footer .info > .right > .left {
+    float: left;
+    
+    width: 50%;
+}
+footer .info > .right > .right {
+    float: left;
+    
+    width: 50%;
+}

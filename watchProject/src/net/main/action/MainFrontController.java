@@ -4,88 +4,72 @@ import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.main.action.Action;
-import net.main.action.ActionForward;
-
 public class MainFrontController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public MainFrontController() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
-	protected void doProcess(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException {
-		System.out.println("doProcess() 호출!");
-		//////////////////////////////////////////////////////////////////////////////
-		// 1. 가상주소 계산
-		//////////////////////////////////////////////////////////////////////////////
-		
-		String requestURI = request.getRequestURI();
-		System.out.println("URI : " + requestURI);
-		
-		String contextPath = request.getContextPath();
-		System.out.println("ContextPath(프로젝트명) : " + contextPath);
-		
-		String command = requestURI.substring(contextPath.length());
-		System.out.println("command : " + command);
-		
-		System.out.println("----------------- 페이지 주소 계산 완료 -----------------");
-		
-		//////////////////////////////////////////////////////////////////////////////
-		// 2. 계산된 주소를 사용해서 페이지 형태구분(View/Model)
-		//////////////////////////////////////////////////////////////////////////////
-		
-		System.out.println("----------------- 페이지 구분(view/model) -----------------");
-		
-		Action action = null;
-		ActionForward forward = null;
-		
-		
-		if(command.equals("/Main.me")) {
-			System.out.println("./Main.me 주소요청");
-			
-			action = new MainAction();
-			
-			try {
-				forward = action.execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			
-		} 
-		//////////////////////////////////////////////////////////////////////////////
-		// 3. 실제 페이지 이동 동작 (redirect/forward)
-		//////////////////////////////////////////////////////////////////////////////
-		
-		System.out.println("----------------- 페이지 이동(redirect(true)/forward(false)) -----------------");
-		
-		if(forward != null) {
-			if(forward.isRedirect()) {
-				response.sendRedirect(forward.getPath());
-			} else {
-				RequestDispatcher dis = 
-						request.getRequestDispatcher(forward.getPath());
-				
-				dis.forward(request, response);
-			}
+    protected void doProcess(HttpServletRequest request,
+    		HttpServletResponse response) throws ServletException, IOException {
+    	System.out.println("Index.jsp 로드");
+    	
+    	Action action = new MainSliderListAction();
+    	ActionForward forward = null;
+    	
+    	try {
+    		forward = action.execute(request, response);
+    	}catch (Exception e) {
+			e.printStackTrace();
 		}
-	}
-
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException {
-		System.out.println("doGet() 호출");
+    	
+    	
+    	if(forward != null){
+        	if(forward.isRedirect()){
+        		response.sendRedirect(forward.getPath());
+        		System.out.println("리다이렉트");
+        	}else{
+        		RequestDispatcher dis =
+        				request.getRequestDispatcher(forward.getPath());
+        		dis.forward(request, response);
+        		System.out.println("포워드");
+        	}
+        }
+    	
+    }
+    
+    
+    
+    
+    
+    
+    
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("두겟");
 		doProcess(request, response);
 	}
 
-	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException {
-		System.out.println("doPost() 호출");
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("두포스트");
 		doProcess(request, response);
 	}
-	
-	
 
 }
-
