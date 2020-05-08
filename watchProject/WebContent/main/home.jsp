@@ -76,8 +76,7 @@
             </div>
         </article>
 
-        <article class="content-xl content-2 bg-black text-white pad-2 font-xl">
-            <br>
+        <article class="content-xl content-2 bg-black text-white pad-7 font-xl">
             <h2>TREND REPORT</h2>
             <div class="swiper-container swiper-2">
                 <div class="swiper-wrapper">
@@ -175,13 +174,13 @@
                                     
                                 </div>
                                 <div class="grid-img img2">
-                                    2
+                                    <img src="./img/hotBanner/citizen_01.jpg">
                                 </div>
                                 <div class="grid-img img3">
-                                    3
+                                    <img src="./img/hotBanner/citizen_02.jpg">
                                 </div>
                                 <div class="grid-img img4">
-                                    4
+                                    <img src="./img/hotBanner/citizen_03.jpg">
                                 </div>
                             </div>
                             <button>VIEW MORE</button>
@@ -190,21 +189,22 @@
                     <!-- 슬라이드 페이지 -->
                     <div class="swiper-slide">
                         <div class="slide-container bg-hotpink">
-                            <h3>Logo</h3>
+                            <img src="./img/logo/d&g.png">
                             <h5>청하가 소개하는 돌체앤가바나</h5>
-                            <h5>가나다라마바사</h5>
                             <div class="grid-container gtc5 grid1">
                                 <div class="grid-img img1">
-                                    1
+                                    <iframe id="ytplayer" type="text/html" width="100%" height="100%"
+  										src="https://www.youtube.com/embed/dgl9Mqd4858?autoplay=1&mute=1&playlist=gPACXXlDhBQ&loop=1"
+  										frameborder="0"></iframe>
                                 </div>
                                 <div class="grid-img img2">
-                                    2
+                                    <img src="./img/hotBanner/d&g_01.jpg">
                                 </div>
                                 <div class="grid-img img3">
-                                    3
+                                    <img src="./img/hotBanner/any_09.jpg">
                                 </div>
                                 <div class="grid-img img4">
-                                    4
+                                    <img src="./img/hotBanner/any_10.jpg">
                                 </div>
                             </div>
                             <button>VIEW MORE</button>
@@ -213,21 +213,17 @@
                     <!-- 슬라이드 페이지 -->
                     <div class="swiper-slide">
                         <div class="slide-container bg-beige">
-                            <h3>Logo</h3>
-                            <h5>청하가 소개하는 돌체앤가바나</h5>
-                            <h5>가나다라마바사</h5>
-                            <div class="grid-container gtc5 grid1">
+                            <img src="./img/logo/ck-logo.png">
+                            <h5>CALVIN KLEIN PERFORMANCE STYLE!</h5>
+                            <div class="grid-container gtc3">
                                 <div class="grid-img img1">
-                                    1
+                                    <img src="./img/hotBanner/any_01.jpg" style="height: 100%; width: auto;">
                                 </div>
                                 <div class="grid-img img2">
-                                    2
+                                    <img src="./img/hotBanner/any_01.jpg" style="height: 100%; width: auto;">
                                 </div>
                                 <div class="grid-img img3">
-                                    3
-                                </div>
-                                <div class="grid-img img4">
-                                    4
+                                    <img src="./img/hotBanner/any_01.jpg" style="height: 100%; width: auto;">
                                 </div>
                             </div>
                             <button>VIEW MORE</button>

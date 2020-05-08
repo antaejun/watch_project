@@ -127,6 +127,7 @@ article button {
     padding-top: 40px;
 }
 .swiper-3 img {
+	overflow: hidden;
     height: 100%;
     width: 100%;
 }
@@ -143,10 +144,19 @@ article button {
 }
 .grid-container {
     display: grid;
+    position: relative;
     grid-gap: 5px;
     height: 450px;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 20px auto;
+    
+}
+.content-4 .grid-img {
+	
+}
+.content-4 .grid-img img {
+	height: 100%;
+	width: 100%;
 }
 
 
@@ -215,11 +225,18 @@ article button {
     margin: 10px auto;
 }
 */
-.gtc5{
-    grid-template-columns: auto auto auto auto auto;
+.gtc3 {
+	grid-template-columns: 33% 33% 33%;
+}
+
+.gtc5 {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+.gtc7 {
+	grid-template-columns: auto auto auto auto auto auto auto;
 }
 .grid-img {
-    background-color: red;
+    background-color: #dddddd;
 }
 .grid1 .img1 {
     grid-area: 1 / 1 / 3 / 4;
