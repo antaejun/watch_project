@@ -1,3 +1,5 @@
+<%@page import="org.json.simple.ItemList"%>
+<%@page import="net.main.db.ItemAllDTO"%>
 <%@page import="net.items.db.ItemDTO"%>
 <%@page import="net.main.db.ImageTableDTO"%>
 <%@page import="java.util.List"%>
@@ -40,6 +42,8 @@
 		= (List<ImageTableDTO>)request.getAttribute("imageTableList");
 	List<ItemDTO> arrival
 		= (List<ItemDTO>)request.getAttribute("arrival");
+	List<ItemAllDTO> itemAllList
+		= (List<ItemAllDTO>)request.getAttribute("itemAllList");
 	%>
 	    
     <section>
@@ -112,160 +116,35 @@
 
         <article class="content-xl content-3 bg-gradient1 text-white pad-2 font-xl">
             <br>
-            <%
-			for(int i=0; i<imageTableList.size(); i++){
-				ImageTableDTO dto = imageTableList.get(i);
-                	
-			%>
-			<%= dto.getO_name()%>
-			<%
-			}
-			%>
-			<%
-			for(int i=0; i<arrival.size(); i++){
-				ItemDTO dto = arrival.get(i);
-			
-			%>
-			<%= dto.getItem_name() %>
-			<%
-			}
-			%>
             <h1>NEW ARRIVAL</h1>
-            <h5>99,999개</h5>
+            <h5><%= arrival.size() %>개</h5>
             <p>전체보기 ></p>
             <div class="swiper-container swiper-3 content-s text-black">
                 <div class="swiper-wrapper">
                     <!-- 슬라이드 페이지 -->
+                    <%
+                    for(int i=0, temp=-1; i<itemAllList.size(); i++){
+                    	ItemAllDTO dto = itemAllList.get(i);
+                    	
+                    	if(temp != dto.getItemDTO().getIdx()){
+                    	
+                    %>
                     <div class="swiper-slide">
                         <div class="card-2 cascade">
                             <div class="fake_img">
-
+								<img src="<%= dto.getImageDTO().getSave_path() + dto.getImageDTO().getF_name()%>">
                             </div>
                             <div class="item">
-                                <h1>aaa</h1>
-                                <p>가나다라마바사</p>
-                                <p>아아아아아아아</p>
-                                <p>999원, 333원</p>
+                                <h1><%= dto.getItemDTO().getItem_name() %></h1>
+                                <p><%= dto.getItemDTO().getItem_info() %></p>
+                                <p><%= dto.getItemDTO().getItem_price() %>원</p>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="card-2 cascade">
-                            <div class="fake_img">
-
-                            </div>
-                            <div class="item">
-                                <h1>bbb</h1>
-                                <p>가나다라마바사</p>
-                                <p>아아아아아아아</p>
-                                <p>999원, 333원</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card-2 cascade">
-                            <div class="fake_img">
-
-                            </div>
-                            <div class="item">
-                                <h1>ccc</h1>
-                                <p>가나다라마바사</p>
-                                <p>아아아아아아아</p>
-                                <p>999원, 333원</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card-2 cascade">
-                            <div class="fake_img">
-
-                            </div>
-                            <div class="item">
-                                <h1>ddd</h1>
-                                <p>가나다라마바사</p>
-                                <p>아아아아아아아</p>
-                                <p>999원, 333원</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card-2 cascade">
-                            <div class="fake_img">
-
-                            </div>
-                            <div class="item">
-                                <h1>eee</h1>
-                                <p>가나다라마바사</p>
-                                <p>아아아아아아아</p>
-                                <p>999원, 333원</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card-2 cascade">
-                            <div class="fake_img">
-
-                            </div>
-                            <div class="item">
-                                <h1>fff</h1>
-                                <p>가나다라마바사</p>
-                                <p>아아아아아아아</p>
-                                <p>999원, 333원</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card-2 cascade">
-                            <div class="fake_img">
-
-                            </div>
-                            <div class="item">
-                                <h1>ggg</h1>
-                                <p>가나다라마바사</p>
-                                <p>아아아아아아아</p>
-                                <p>999원, 333원</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card-2 cascade">
-                            <div class="fake_img">
-
-                            </div>
-                            <div class="item">
-                                <h1>hhh</h1>
-                                <p>가나다라마바사</p>
-                                <p>아아아아아아아</p>
-                                <p>999원, 333원</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card-2 cascade">
-                            <div class="fake_img">
-
-                            </div>
-                            <div class="item">
-                                <h1>iii</h1>
-                                <p>가나다라마바사</p>
-                                <p>아아아아아아아</p>
-                                <p>999원, 333원</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card-2 cascade">
-                            <div class="fake_img">
-
-                            </div>
-                            <div class="item">
-                                <h1>jjj</h1>
-                                <p>가나다라마바사</p>
-                                <p>아아아아아아아</p>
-                                <p>999원, 333원</p>
-                            </div>
-                        </div>
-                    </div>
+                    <%	}
+                    	temp = dto.getItemDTO().getIdx();
+                    }
+                    %>
                 </div>
                 <!-- 페이지 네이션 -->
                 <div class="swiper-pagination"></div>

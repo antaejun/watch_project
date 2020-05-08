@@ -18,7 +18,7 @@ public class ItemsDAO {
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 	String sql = "";
-	final static String SQL_ARRIVAL = "WHERE datediff(sysdate(), regist_date) < 7;";
+	final static String SQL_ARRIVAL = "WHERE datediff(sysdate(), regist_date) < 30;";
 	
 	public static String getSqlArrival() {
 		return SQL_ARRIVAL;
@@ -312,6 +312,7 @@ public class ItemsDAO {
 					idto.setItem_amount(rs.getInt("item_amount"));
 					idto.setItem_code(rs.getString("item_code"));
 					idto.setItem_color(rs.getString("item_color"));
+					idto.setItem_info(rs.getString("item_info"));
 					idto.setItem_name(rs.getString("item_name"));
 					idto.setItem_price(rs.getInt("item_price"));
 					idto.setItem_size(rs.getString("item_size"));

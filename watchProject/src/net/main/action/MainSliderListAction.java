@@ -39,6 +39,10 @@ public class MainSliderListAction implements Action{
 		ItemsDAO itemdao = new ItemsDAO();
 		List<ItemDTO> arrival = itemdao.getItemList(itemdao.getSqlArrival());
 		request.setAttribute("arrival", arrival);
+		
+		ItemAllDAO itemAllDAO = new ItemAllDAO();
+		List<ItemAllDTO> itemAllList = itemAllDAO.getItemAllList(itemAllDAO.getSqlLeftAll());
+		request.setAttribute("itemAllList", itemAllList);
 		/*
 		List<ItemDTO> itemList = itemdao.getItemsList();
 		request.setAttribute("itemList", itemList);

@@ -110,7 +110,7 @@ article button {
     padding: 0;
 }
 .content-3 .fake_img {
-    background-color: red;
+    background-color: #dddddd;
     height: 70%;
     border-bottom: 1px solid gray;
 }
