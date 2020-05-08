@@ -1,3 +1,5 @@
+<%@page import="net.items.db.ItemDTO"%>
+<%@page import="net.main.db.ImageTableDTO"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -34,6 +36,10 @@
 		= (List<MainSliderBean>)request.getAttribute("sliderList");
 	List<MainSliderBean> trendList
 		= (List<MainSliderBean>)request.getAttribute("trendList");
+	List<ImageTableDTO> imageTableList
+		= (List<ImageTableDTO>)request.getAttribute("imageTableList");
+	List<ItemDTO> arrival
+		= (List<ItemDTO>)request.getAttribute("arrival");
 	%>
 	    
     <section>
@@ -106,6 +112,24 @@
 
         <article class="content-xl content-3 bg-gradient1 text-white pad-2 font-xl">
             <br>
+            <%
+			for(int i=0; i<imageTableList.size(); i++){
+				ImageTableDTO dto = imageTableList.get(i);
+                	
+			%>
+			<%= dto.getO_name()%>
+			<%
+			}
+			%>
+			<%
+			for(int i=0; i<arrival.size(); i++){
+				ItemDTO dto = arrival.get(i);
+			
+			%>
+			<%= dto.getItem_name() %>
+			<%
+			}
+			%>
             <h1>NEW ARRIVAL</h1>
             <h5>99,999개</h5>
             <p>전체보기 ></p>

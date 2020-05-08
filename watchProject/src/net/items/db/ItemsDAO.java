@@ -18,7 +18,12 @@ public class ItemsDAO {
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 	String sql = "";
+	final static String SQL_ARRIVAL = "WHERE datediff(sysdate(), regist_date) < 7;";
 	
+	public static String getSqlArrival() {
+		return SQL_ARRIVAL;
+	}
+
 	private Connection getConnection() throws Exception {
 		Context init = new InitialContext();
 		
@@ -287,6 +292,43 @@ public class ItemsDAO {
 	}
 	// getItems(idx) END
 	
+	
+	// getItemsList(query) 
+		public List<ItemDTO> getItemList(String query) {
+			List<ItemDTO> itemsList = new ArrayList<ItemDTO>();
+			System.out.println("getItemListDAO");
+			try {
+				con = getConnection();
+				sql = "SELECT * FROM item " + query;
+				pstmt = con.prepareStatement(sql);
+				rs = pstmt.executeQuery();
+				
+				while(rs.next()) {
+					ItemDTO idto = new ItemDTO();
+					
+					idto.setIdx(rs.getInt("idx"));
+					idto.setCode(rs.getString("code"));
+					idto.setCode_detail(rs.getString("code_detail"));
+					idto.setItem_amount(rs.getInt("item_amount"));
+					idto.setItem_code(rs.getString("item_code"));
+					idto.setItem_color(rs.getString("item_color"));
+					idto.setItem_name(rs.getString("item_name"));
+					idto.setItem_price(rs.getInt("item_price"));
+					idto.setItem_size(rs.getString("item_size"));
+					idto.setRegist_date(rs.getDate("regist_date"));
+					idto.setDelete_yn(rs.getString("delete_yn"));
+					
+					itemsList.add(idto);
+				}
+				System.out.println("전체 상품 리스트 " + itemsList.size() + "개 저장 완료");
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				closeDB();
+			}
+			
+			return itemsList;
+		}
 	
 	
 	
