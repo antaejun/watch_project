@@ -27,7 +27,7 @@
 			<tr>
 				<td>${customerscenter.num}</td>
 				<td>
-   				 <a href="http://localhost:8088/controller/board/view?num=${customerscenter.num}">${customerscenter.title}</a>
+   				 <a href="/board/view?num=${customerscenter.num}">${customerscenter.title}</a>
 				</td>
 				<td>${customerscenter.regist_date}</td>
 				<td>${customerscenter.user_email}</td>

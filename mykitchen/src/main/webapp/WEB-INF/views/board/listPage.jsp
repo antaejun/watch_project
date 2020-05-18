@@ -27,7 +27,7 @@
 			<tr>
 				<td>${customerscenter.num}</td>
 				<td>
-   				 <a href="http://localhost:8088/controller/board/view?num=${customerscenter.num}">${customerscenter.title}</a>
+   				 <a href="/board/view?num=${customerscenter.num}">${customerscenter.title}</a>
 				</td>
 				<td>${customerscenter.regist_date}</td>
 				<td>${customerscenter.user_email}</td>
@@ -40,14 +40,14 @@
 
 <div>
 <c:if test="${prev}">
- <span>[ <a href="http://localhost:8088/controller/board/listPage?num=${startPageNum - 1}">이전</a> ]</span>
+ <span>[ <a href="/board/listPage?num=${startPageNum - 1}">이전</a> ]</span>
 </c:if>
 
 <c:forEach begin="${startPageNum}" end="${endPageNum}" var="num">
  <span>
  
   <c:if test="${select != num}">
-   <a href="http://localhost:8088/controller/board/listPage?num=${num}">${num}</a>
+   <a href="/board/listPage?num=${num}">${num}</a>
   </c:if>    
   
   <c:if test="${select == num}">
@@ -58,7 +58,7 @@
 </c:forEach>
 
 <c:if test="${next}">
- <span>[ <a href="http://localhost:8088/controller/board/listPage?num=${endPageNum + 1}">다음</a> ]</span>
+ <span>[ <a href="/board/listPage?num=${endPageNum + 1}">다음</a> ]</span>
 </c:if>
 <%-- 	<c:if test="${prev}"> --%>
 <%-- 		<span>[ <a href="/board/listpage?num=${starPageNum - 1}">이전</a>]</span> --%>

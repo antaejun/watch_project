@@ -22,8 +22,8 @@ ${view.user_email}"<br/>
 ${view.content}<br/>
 
 <div>
-<a href="http://localhost:8088/controller/board/modify?num=${view.num}">게시물 수정</a>, 
-<a href="http://localhost:8088/controller/board/delete?num=${view.num}">게시물 삭제</a>
+<a href="/board/modify?num=${view.num}">게시물 수정</a>, 
+<a href="/board/delete?num=${view.num}">게시물 삭제</a>
 </div>
 
 

@@ -16,7 +16,7 @@ public class BoardDAOImpl implements BoardDAO {
  @Inject
  private SqlSession sql;
  
- private static String namespace = "com.kitchen.mappers.boardMapper";
+ private static String namespace = "com.kitchen.mapper.boardMapper";
 
  // 게시물 목록
  @Override
