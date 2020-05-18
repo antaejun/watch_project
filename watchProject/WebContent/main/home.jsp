@@ -27,7 +27,7 @@
     <!-- Awesome5 Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
 	
-	<title>YOUR WATCH</title>
+	<title>제목칸</title>
 </head>
 <body>
 	<%@ include file="header.jsp" %>
@@ -48,7 +48,7 @@
 	    
     <section>
         
-        <article class="content-xl content-1 bg-black text-white pad-0">
+        <article class="content-xl content-1 bg-white text-white pad-0"> <!-- 메인 이미지 뒷쪽 배경 봐꾸는거 -->
             <div class="swiper-container swiper-1 content">
                 <div class="swiper-wrapper">
                     <!-- 슬라이드 페이지 -->
@@ -76,7 +76,7 @@
             </div>
         </article>
 
-        <article class="content-xl content-2 bg-black text-white pad-7 font-xl">
+       <%--  <article class="content-xl content-2 bg-white text-white pad-7 font-xl"> <!-- 메인 이미지 뒷쪽 배경 봐꾸는거 -->
             <h2>TREND REPORT</h2>
             <div class="swiper-container swiper-2">
                 <div class="swiper-wrapper">
@@ -102,7 +102,7 @@
                     <%
                     }
                     %>
-                </div>
+                </div> --%>
                 
                 <!-- 네비게이션 버튼 -->
                 <div class="swiper-button-prev"></div>
@@ -113,63 +113,21 @@
             
         </article>
 
-        <article class="content-xl content-3 bg-gradient1 text-white pad-2 font-xl">
-            <br>
-            <h1>NEW ARRIVAL</h1>
-            <h5><%= arrival.size() %>개</h5>
-            <p>전체보기 ></p>
-            <div class="swiper-container swiper-3 content-s text-black">
-                <div class="swiper-wrapper">
-                    <!-- 슬라이드 페이지 -->
-                    <%
-                    for(int i=0, temp=-1; i<itemAllList.size(); i++){
-                    	ItemAllDTO dto = itemAllList.get(i);
-                    	
-                    	if(temp != dto.getItemDTO().getIdx()){
-                    	
-                    %>
-                    <div class="swiper-slide">
-                        <div class="card-2 cascade">
-                            <div class="fake_img">
-								<img src="<%= dto.getImageDTO().getSave_path() + dto.getImageDTO().getF_name()%>">
-                            </div>
-                            <div class="item">
-                                <h1><%= dto.getItemDTO().getItem_name() %></h1>
-                                <p><%= dto.getItemDTO().getItem_info() %></p>
-                                <p><%= dto.getItemDTO().getItem_price() %>원</p>
-                            </div>
-                        </div>
-                    </div>
-                    <%	}
-                    	temp = dto.getItemDTO().getIdx();
-                    }
-                    %>
-                </div>
-                <!-- 페이지 네이션 -->
-                <div class="swiper-pagination"></div>
-                <!-- 네비게이션 버튼 -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <!-- 스크롤 바 -->
-                <!--
-                <div class="swiper-scrollbar"></div>
-                -->
-            </div>
-        </article>
+        
 
-        <article class="content-xl content-4 bg-black text-white pad-0">
+        <article class="content-xl content-4 bg-white text-white pad-0">
             <div class="swiper-container swiper-4 content-xl">
                 <div class="swiper-wrapper">
                     <!-- 슬라이드 페이지 -->
                     <div class="swiper-slide">
-                        <div class="slide-container bg-black">
+                        <div class="slide-container bg-white">
                             <img src="img/logo/citizen.svg" style="height: 80px;width: auto;">
                             
                             <h5>빛으로 가는 시계 시티즌</h5>
                             <div class="grid-container gtc5 grid1">
                                 <div class="grid-img img1">
                                     <iframe id="ytplayer" type="text/html" width="100%" height="100%"
-  										src="https://www.youtube.com/embed/gPACXXlDhBQ?autoplay=1&mute=1&playlist=gPACXXlDhBQ&loop=1"
+  										src="https://www.youtube.com/embed/z31PeVIWdL0?autoplay=1&mute=1&playlist=gPACXXlDhBQ&loop=1"
   										frameborder="0"></iframe>
                                     
                                 </div>
@@ -188,7 +146,7 @@
                     </div>
                     <!-- 슬라이드 페이지 -->
                     <div class="swiper-slide">
-                        <div class="slide-container bg-hotpink">
+                        <div class="slide-container bg-white">
                             <img src="./img/logo/d&g.png">
                             <h5>청하가 소개하는 돌체앤가바나</h5>
                             <div class="grid-container gtc5 grid1">
@@ -212,7 +170,7 @@
                     </div>
                     <!-- 슬라이드 페이지 -->
                     <div class="swiper-slide">
-                        <div class="slide-container bg-beige">
+                        <div class="slide-container bg-white">
                             <img src="./img/logo/ck-logo.png">
                             <h5>CALVIN KLEIN PERFORMANCE STYLE!</h5>
                             <div class="grid-container gtc3">
@@ -240,98 +198,10 @@
             </div>
         </article>
 
-        <article class="content-xl content-5 bg-white text-black pad-3">
-            <div class="wrapper">
-                <h1>가나다</h1>
-                <p>호이호이</p>
-                <div class="container container-5">
-                    <div class="left">
-                        <div class="fake_img">
+      
+      <!--   @@@@@@@@@@@@@@@@@@@@@@@@@@테마 1~4 필요하면 넣기 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="top">
-                            <h3>DAILY<br>기분 전환 마린룩</h3>
-                            <p>
-                                동해물과백두산이<br>
-                                마르고닳도록<br>
-                                하느님이보우하사<br>
-                                우리나라만세<br>
-                            </p>
-                        </div>
-                        <div class="bottom">
-                            <div class="left">
-                                div1
-                            </div>
-                            
-                            <div class="center">
-                                div2
-                            </div>
-                            
-                            <div class="right">
-                                div3
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </article>
-
-        <article class="content-xl content-6 bg-darkbrown text-white">
-            <div class="wrapper content-sm">
-                <h2>PROMOTION</h2>
-                <div class="swiper-container swiper-6">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="fake_img">
-                                1
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="fake_img">
-                                2
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="fake_img">
-                                3
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="fake_img">
-                                4
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="fake_img">
-                                5
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="fake_img">
-                                6
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="fake_img">
-                                7
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                </div>
-                
-            </div>
-        </article>
-
-        <article style="background-color: white;">
+      <!--   <article style="background-color: white;">
             <div class="wrapper">
                 <div class="title">
                     <h3>테마1</h3>
@@ -361,7 +231,9 @@
                     <h3>테마4</h3>
                 </div>
             </div>
-        </article>
+        </article> -->
+          <!--   @@@@@@@@@@@@@@@@@@@@@@@@@@테마 1~4 필요하면 넣기 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+        
     </section>
 	
 	

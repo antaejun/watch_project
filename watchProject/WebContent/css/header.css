@@ -1,7 +1,7 @@
 header {
     position: relative;
-    background: linear-gradient(to left, #ccc 0%, #040404 45%, #000 45%, #000 100%),
-                black;
+    background: linear-gradient(to left, #ccc 0%, #ffffff 45%, #fff 45%, #fff 100%),
+                white;
     background-repeat: no-repeat;
     background-size: auto 71px, auto, auto;
     color: white;
@@ -17,10 +17,10 @@ header > .wrapper {
     max-width: 1920px;
 }
 header .wrapper .left {
-    /*border: 1px solid yellow;*/
+    /*border: 1px solid white;*/
     height: 100%;
     width: 80%;
-    background-color: black;
+    background-color: white;
     position: absolute;
     left: 10%;
     
@@ -57,7 +57,7 @@ header .wrapper .left .top .rt {
     float: right;
 }
 header .wrapper .left .top a {
-    color: #999999;
+    color: #251919;
     text-align: center;
     font-size: 13px;
     text-decoration: none;
@@ -112,10 +112,10 @@ header .search {
 
 
 nav {
-    border-top: 1px solid #333333;
+    border-top: 1px solid #ffffff;
     position: absolute;
     top: 120px;
-    background-color: black;
+    background-color: white;
     height: 50px;
     width: 100%;
     margin: 0 auto;
@@ -138,7 +138,7 @@ nav li {
 }
 
 nav a {
-    color: #999999;
+    color: #170f0f;
     font-weight: bold;
     font-size: 15px;
     display: block;
@@ -151,8 +151,8 @@ nav a {
     display: none;
     position: absolute;
     margin-top: 50px;
-    border-top: 1px solid #333333;
-    background-color: #000000dd;
+    border-top: 1px solid #000000;
+    background-color: #000000;
     height: 200px;
     width: 100%;
     
@@ -178,5 +178,5 @@ nav a {
 }
 
 .dropbtn:hover {
-    color: red;
+    color: #000000;
 }

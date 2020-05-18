@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- mapper관련 DTD 추가 
+   DTD : xml 문서(파일) 구조를 정의.
+        데이터 교환의 표준형식임.
+        데이터가 유효한 데이터인지를 판단 가능
+-->
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.kitchen.mapper.RentalMapper">
+  
+     <insert id="create">
+       insert into kitchen_rental(idx,kitchen_rental_code,R_regist_date,R_regist_time,user_email,
+       kitchen_name,rental_price,payment_type,trade_payer) 
+       values(#{idx},#{kitchen_rental_code},#{R_regist_date},#{R_regist_time},#{user_email},#{kitchen_name},#{rental_price},#{payment_type},#{trade_payer})    
+    </insert>
+    
+    
+       <!-- (UnParsed) Character DATA(CDATA) : 파싱하지 않는 문자 데이터
+       <-> Parsed Character DATA (PCDATA)
+       
+       -잘못 파싱될수 있는 xml 문서를 처리할때 주로 사용해야함. 
+        > = &gt;
+        < = &lt;
+        >= = &gt;=
+        <= = &lt;=      
+     -->
+    
+<!--     <select id="List" resultType="com.kitchen.domain.KitchenVO">
+      <![CDATA[
+      select
+        *
+      from
+      kitchen
+      where idx > 0
+      order by idx desc, regist_date desc
+      ]]>
+    </select>
+    
+     <select id="read" resultType="KitchenVO">
+      select
+        *
+      from 
+      kitchen
+      where idx=#{idx}    
+    </select> -->
+    
+    
+    <!-- <delete id="delete">
+      delete from 
+      tbl_board 
+      where bno = #{bno}
+    </delete>
+    
+    <update id="update">
+     update tbl_board 
+     set title=#{title},content=#{content},writer=#{writer} 
+     where bno = #{bno}    
+    </update>
+    
+    
+   <select id="listPage" resultType="KitchenVO">
+      <![CDATA[
+      select
+         *
+      from
+        tbl_board
+      where bno > 0
+      order by bno desc, regdate desc
+      limit #{page},10
+      ]]>    
+    </select>
+    
+    
+    <select id="listCri" resultType="KitchenVO">
+      <![CDATA[
+      select
+         *
+      from
+        tbl_board
+      where bno > 0
+      order by bno desc, regdate desc
+      limit #{pageStart},#{pageSize}  
+      ]]>    
+    </select>
+    
+    글 전체 개수 계산하기
+    <select id="countPage" resultType="int">
+      select 
+         count(bno)
+      from
+        tbl_board
+      where
+         bno > 0  
+    </select>  -->
+    
+    
+    
+    
+    
+    
+    
+  
+  
+  </mapper>
+  
+  
+  
+  
+  
+  
+  

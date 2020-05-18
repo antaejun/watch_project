@@ -1,0 +1,235 @@
+section {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.nav_info {
+    margin: 10px 0;
+}
+.title {
+    text-align: center;
+    font-size: x-large;
+}
+
+
+.side_bar {
+    float: left;
+    width: 200px;
+    background-color: white;
+}
+
+.side_nav {
+    width: 100%;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    margin: 20px 0;
+}
+.side_nav ul {
+    list-style-type: none;
+    color: gray;
+}
+.side_nav li {
+    margin: 6px 0;
+}
+.side_nav .color {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    overflow: hidden;
+}
+.side_nav .color li {
+    margin: 0;
+}
+.side_nav .color input[type="checkbox"] + label {
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin: 3px;
+    background-color: red;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.side_nav .color input[type="checkbox"]:checked + label .fa{
+    display: initial;
+}
+.side_nav .color input[type="checkbox"] {
+    display: none;
+}
+.side_nav .color .fa {
+    display: none;
+    font-size: 30px;
+}
+.side_nav .nav_box {
+    margin: 10px 0;
+}
+.side_nav button + label {
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 80px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.side_nav button {
+    display: none;
+}
+
+.side_nav .nav_check input[type="checkbox"] + label {
+    display: block;
+    position: relative;
+    margin: 3px;
+    height: 18px; width: 18px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.side_nav .nav_check input[type="checkbox"]:checked + label {
+    background-color: red;
+    border: 1px solid red;
+    font-weight: bold;
+    color: black;
+}
+.side_nav .nav_check .fas {
+    color: white;
+    display: block;
+}
+.side_nav .nav_check input[type="checkbox"] {
+    display: none;
+}
+.side_nav .nav_check span {
+    position: absolute;
+    top: -2px;
+    left: 23px;
+    width: 150px;
+}
+
+.contents {
+    width: 940px;
+    margin: 30px;
+    float: left;
+    /*background-color: yellow;*/
+}
+.fillter {
+    background-color: #eeeeee;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.fillter .selected label {
+    display: inline-block;
+    border: 1px solid gray;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 2px 1px;
+    
+}
+
+.align {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid gray;
+}
+.align ul {
+    list-style-type: none;
+}
+.align li {
+    float: left;
+}
+.align a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: gray;
+}
+.align select {
+    float: right;
+    height: 30px;
+    width: 150px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+}
+.items .card {
+    position: relative;
+    border: 1px solid gray;
+    height: 350px;
+    width: 280px;
+    margin: 10px 20px;
+}
+.items .card .fake_img {
+    background-color: lightgray;
+    height: 250px;
+    width: 100%;
+}
+.items .card .img_tag1 {
+    position: absolute;
+    background-color: palevioletred;
+    color: white;
+    height: 30px;
+    width: 60px;
+    overflow: hidden;
+    top: 20px;
+    left: 0;
+    text-align: center;
+}
+.items .card .img_tag2 {
+    position: absolute;
+    background-color: black;
+    color: white;
+    height: 30px;
+    width: 60px;
+    overflow: hidden;
+    top: 20px;
+    right: 0;
+    text-align: center;
+}
+.items .card .text_box {
+    text-align: center;
+}
+
+.pagination {
+    text-align: center;
+}
+.page {
+    margin: 30px 0;
+    display: inline-block;
+}
+.page a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+.page a.active {
+    background-color: #4caf50;
+    color: white;
+    border: 1px solid #4caf50;
+}
+
+
+footer {
+    clear: both;
+    width: 100%;
+}

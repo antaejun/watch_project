@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kitchen.mappers.boardMapper">
+
+	<!-- 게시물 목록 -->
+	<select id="list" resultType="com.kitchen.domain.BoardVO">
+		select
+			num,title, content, user_email, regist_date
+		from customerscenter 
+	</select>
+
+	<!-- 게시물 작성 -->
+	<insert id="write" parameterType="com.kitchen.domain.BoardVO">
+		insert into
+		customerscenter(title,content,user_email)
+			values(#{title}, #{content}, #{user_email})
+	</insert>
+	<!-- 게시물 조회 -->
+<select id="view" parameterType="int" resultType="com.kitchen.domain.BoardVO">
+ 
+  select
+	num,title, content, useR_email, regist_date
+    from
+    customerscenter
+    where
+    num =#{num};
+</select>
+	
+	<!-- 게시물 수정 -->
+<update id="modify" parameterType="com.kitchen.domain.BoardVO">
+	update customerscenter
+		set
+			title = #{title},
+			content = #{content},
+			user_email = #{user_email}
+			where num = #{num}
+
+</update>
+
+	<!-- 게시물 수정 -->
+<update id="delete" parameterType="com.kitchen.domain.BoardVO">
+	update customerscenter
+		set
+			delete_yn = 'y'
+			where num = #{num}
+
+</update>
+	<!-- 게시물 총 갯수 -->
+<select id="count" resultType="int">
+	select count(num) from customerscenter
+
+</select>
+
+<!-- 게시물 목록 + 페이징 -->
+<select id="listPage" parameterType="hashMap" resultType="com.kitchen.domain.BoardVO">
+ select
+  num, title, user_email, regist_date
+ from customerscenter
+ order by num desc
+  limit #{displayPost}, #{postNum}
+</select>
+	
+</mapper>

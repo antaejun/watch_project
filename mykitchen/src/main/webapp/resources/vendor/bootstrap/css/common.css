@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bg-black {
+    background-color: black;
+}
+.bg-white {
+    background-color: white;
+}
+.bg-beige {
+    background-color: #e0cc78;
+}
+.bg-hotpink {
+    background-color: #feb2b8;
+}
+.bg-lightgreen {
+    background-color: #d8e6b3;
+}
+.bg-darkbrown {
+    background-color: #2b170d;
+}
+.bg-purple {
+    background-color: purple;
+}
+.bg-lightblue {
+    background-color: lightblue;
+}
+.bg-gradient1 {
+    background-color: #1fc8db;
+    background-image: linear-gradient(141deg, #10485c 0%, #8cbac0 51%, #10485c 75%);
+    color: white;
+    opacity: 0.95;
+}
+.bg-clear {
+    background-color: #ffffff00;
+}
+
+.content {
+    max-width: 1920px;
+}
+.content-xl {
+    width: 100%;
+}
+.content-s {
+    max-width: 1600px;
+}
+.content-sm {
+    max-width: 1280px;
+}
+.text-white {
+    color: white;
+}
+.text-black {
+    color: black;
+}
+.font-xl {
+    font-size: xx-large;
+    
+}
+.pad-0 {
+    padding: 0;
+}
+.pad-1 {
+    padding: 10px 0;
+}
+.pad-2 {
+    padding: 20px 0;
+}
+.pad-3 {
+    padding: 30px 0;
+}
+.pad-5 {
+	padding: 50px 0;
+}
+.pad-7 {
+	padding: 70px 0;
+}
+.pad-10 {
+	padding: 100px 0;
+}
+.sb_tit{ font-size:1.4em; color:#000; margin-bottom:20px; font-weight: bold;}
+	.sb_tit img{ vertical-align:middle; margin-right:8px;}
+ .sb_tit {font-size:1.4em; color:#000; margin-bottom:10px;}
+	.sb_tit img {vertical-align:middle; margin-right:8px;}	
+    .sb_tit em {color:#006600;}
+.cook_info {overflow:hidden; padding:30px 0; border-top:4px solid #655138;}
+.cook_info div {display:inline-block; }
+.cook_info .office {width:36.7%; margin-right:3%;}
+.cook_info .office h3 {border:1px solid #999; padding:20px; font-size:1.1em;}
+.cook_info .office h3 img {margin-right:.25em;}
+.cook_info .office p {border-bottom:1px solid #ccc; padding:15px 0 25px 20px; font-size:1em; line-height:1.6em;}
+.cook_info .office em.orange {color:#ff7800;}
+.cook_info .map.right {width:60%; height:400px; float:right; border:1px solid #999;}
+
+.cook_info {padding:30px 0 60px 0;}
+.cook_info div {display:block;}
+.cook_info .office {width:100%;}
+.cook_info .office p {border-bottom:none;}
+.cook_info .map.right {width:99.7%;}
+
+/* 입점안내 css */
+/* .sub_top{width:100%; height:226px; background:url(http://localhost:8088/controller/resources/img/chef-1209161_1280.jpg) center no-repeat; background-size: cover;}
+.sub_top .menu_tit{width:1200px; margin:0 auto; text-align:center; color:#fff; line-height: 220px; font-size:2.6em; font-weight:bold;}
+
+   .sub_top .menu_tit{width:100%;}
+	.sub_top.space {margin:0 0 20px 0;}
+		.sub_top{height:150px;}
+    .sub_top .menu_tit{font-size:2em; line-height: 130px;}
+    
+        .sub_top{height:100px;}
+    .sub_top .menu_tit{font-size:2em; line-height: 90px;} */

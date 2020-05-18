@@ -39,13 +39,7 @@
                     </div>
                 </div>
             </div>
-            <div class="right">
-                <div class="top">
-                    <img class="tab_round" src="img/tab_black_round.png">
-                    <img class="tab_logo" src="img/tab_el_Over.png">
-                </div>
-                <div class="bottom"></div>
-            </div>
+            
         </div>
         <nav>
             <ul>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+		<!-- JDBC 사용 DB연결하기 -->
+   <bean id="dataSource"
+      class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+      <!-- <property name="driverClassName" value="com.mysql.jdbc.Driver" /> -->
+      <property name="driverClassName"  value="org.mariadb.jdbc.Driver" />
+
+      <!-- <property name="url" value="jdbc:mysql://localhost:3306/springdb"/> -->
+      <property name="url"
+         value="jdbc:mariadb://203.245.28.69:3306/mykitchen" />
+      <property name="username" value="root"></property>
+      <property name="password" value="manager123"></property>
+   </bean>
+   <!-- SqlSessionnFactory객체 : connection생성,처리 
+       SqlSessionFactoryBean객체(스프링) 
+   -->
+   <bean id="sqlSessionFactory"
+    class="org.mybatis.spring.SqlSessionFactoryBean">
+      <property name="dataSource" ref="dataSource" />
+      <property name="configLocation" 
+                value="classpath:/mybatis-config.xml"
+      ></property>
+      <!-- 
+      XML(Mapper) 파일을 MyBatis에서 인식하도록 처리 
+       -->
+      <property name="mapperLocations"
+                value="classpath:mappers/**/*Mapper.xml"      
+      ></property>      
+   </bean>
+   
+   <!-- SqlSessionTemplate 객체를 생성
+        해당 객체는 SqlSessionFactory 객체를 생성자 형태로 주입
+    -->
+    <bean id="sqlSession"
+          class="org.mybatis.spring.SqlSessionTemplate"
+          destroy-method="clearCache"
+    >
+      <constructor-arg 
+          name="sqlSessionFactory"
+          ref="sqlSessionFactory"  />
+    </bean>
+		
+		
+		
+	<!-- Repository 어노테이션을 설정하고,
+	       설정파일에서 스캔하도록 설정 -->
+	<context:component-scan 
+	     base-package="com.kitchen.persistence" />
+
+	<!-- Repository 어노테이션을 설정하고,
+	       설정파일에서 스캔하도록 설정 -->
+	<context:component-scan 
+	     base-package="com.kitchen.service" />
+	
+			<context:component-scan 
+		 base-package="com.kitchen.utils" />
+		
+		<context:component-scan 
+		 base-package="com.kitchen.domain" />
+		
+</beans>

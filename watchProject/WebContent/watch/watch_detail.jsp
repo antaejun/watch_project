@@ -30,7 +30,7 @@
     <section>
         <article class="container view clearfix">
             <div class="swiper">
-                <div class="fake_img" style="height: 500px; height: 500px; background-color: gray;">
+                <div class="fake_img" style="height: 250px; height: 250px; background-color: gray;">
                     img
                 </div>
                 <div class="pagenation">
