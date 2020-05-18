@@ -72,7 +72,7 @@
 			<li><a href="#"><span>할인상품</span></a></li>
 			<li><a href="#"><span>공지사항</span></a></li>
 			<li><a href="#"><span>이벤트</span></a></li>
-			<li><a href="#"><span>고객센터</span></a>
+			<li><a href="controller/board/listPage?num=1"><span>고객센터</span></a>
 				<div>
 					<a href="#"><span>1:1 문의</span></a>
 					<a href="#"><span>실시간 채팅</span></a>

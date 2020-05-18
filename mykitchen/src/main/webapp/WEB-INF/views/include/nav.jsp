@@ -5,15 +5,15 @@
 <ul>
 
 	<li>
-		<a href="/board/list">글 목록</a>
+		<a href="controller/board/list">글 목록</a>
 	</li>
 	
 	<li>
-		<a href="/board/write">글 작성</a>
+		<a href="controller/board/write">글 작성</a>
 	</li>
 	
 	<li>
- <a href="/board/listPage?num=1">글 목록(페이징)</a> 
+ <a href="controller/board/listPage?num=1">글 목록(페이징)</a> 
 </li>
 
 </ul>
