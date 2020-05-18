@@ -26,8 +26,8 @@
 		</tr>
 		<c:forEach items="${kitchenList }" var="kitchenVO">
 		<tr>
-			<td><a href="http://localhost:8088/controller/kitchenB/kitchen_detail?kitchen_name=${kitchenVO.kitchen_name }">${kitchenVO.kitchen_name}</a></td>
-			<td><img src="http://localhost:8088/controller/resources/${kitchenVO.thumb_image}" /></td>
+			<td><a href="http://localhost:8088/kitchenB/kitchen_detail?kitchen_name=${kitchenVO.kitchen_name }">${kitchenVO.kitchen_name}</a></td>
+			<td><img src="http://localhost:8088/resources/${kitchenVO.thumb_image}" /></td>
 			<td>${kitchenVO.regist_date }</td>
 		</tr>
 		</c:forEach>

@@ -42,7 +42,7 @@ public class KitchenBController {
 	
 	@RequestMapping(value="/register", method=RequestMethod.GET)
 	public String registGET() throws Exception {
-		return "kitchen/register";
+		return "kitchenB/register";
 	}
 	
 	@RequestMapping(value = "/register", method=RequestMethod.POST)
@@ -64,7 +64,7 @@ public class KitchenBController {
 		service.regist(vo);
 		System.out.println("@@@ 컨트롤러 : 사업자 주방 등록 완료!");
 		String kitchen_name = URLEncoder.encode(vo.getKitchen_name(), "UTF-8");
-		return "redirect:/kitchen/option_register?kitchen_name="+kitchen_name;
+		return "redirect:/kitchenB/option_register?kitchen_name="+kitchen_name;
 	}
 	
 	// 주방등록 이후 처리 -> 주방옵션 페이지 이동
@@ -76,7 +76,7 @@ public class KitchenBController {
 		
 		ModelAndView mav = new ModelAndView();
 		
-		mav.setViewName("kitchen/option_register");
+		mav.setViewName("kitchenB/option_register");
 		mav.addObject("kitchen_name",kitchen_name);
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@"+kitchen_name);
 		
@@ -94,7 +94,7 @@ public class KitchenBController {
 		
 		rttr.addFlashAttribute("result", "SUCCSESS");
 		
-		return "redirect:/kitchen/list";
+		return "redirect:/kitchenB/list";
 	}
 	
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
@@ -134,7 +134,7 @@ public class KitchenBController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "redirect:/kitchen/list";
+		return "redirect:/kitchenB/list";
 	}
 	
 	@RequestMapping(value = "/businessMain", method = RequestMethod.GET)

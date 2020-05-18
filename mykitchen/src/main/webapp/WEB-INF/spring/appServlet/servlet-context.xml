@@ -30,7 +30,7 @@
 	
 	<resources location="/imgUpload/**" mapping="/resources/imgUpload/"></resources>	
 	<beans:bean id = "uploadPath" class="java.lang.String">
-	<beans:constructor-arg value="D:\workspace_STS7\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MyKitchen\resources">
+	<beans:constructor-arg value="C:\Users\정원\Desktop\watch_project\mykitchen\src\main\webapp\resources">
 
 	</beans:constructor-arg>
 	</beans:bean>
