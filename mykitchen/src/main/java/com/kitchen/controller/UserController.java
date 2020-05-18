@@ -114,7 +114,7 @@ public class UserController {
 
 		return "redirect:/user/login";
 	}
-	
+	d
 	// 유저정보
 	@RequestMapping(value = "/userinfo", method=RequestMethod.GET)
 	public void infoGET() throws Exception{
