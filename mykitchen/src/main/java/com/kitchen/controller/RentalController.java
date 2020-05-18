@@ -26,7 +26,7 @@ public class RentalController {
 	
 
 		private static final Logger logger = LoggerFactory.getLogger(RentalController.class);
-
+f
 		// 서비스 객체 (의존 주입)
 		@Inject
 		private RentalService service;
